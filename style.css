@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@300;500;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-family: 'Jost', monospace;
+  font-size: 62.5%;
+}
+
+.main-div {
+  height: 100vh;
+  width: 100%;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(87, 239, 196, 0.4)), to(rgba(108, 92, 231, 0.4)));
+  background-image: linear-gradient(to right, rgba(87, 239, 196, 0.4), rgba(108, 92, 231, 0.4));
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.contianer {
+  height: 55rem;
+  min-width: 32rem;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 2rem;
+  -webkit-box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.4);
+          box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.4);
+}
+
+.contianer .title {
+  margin: 4.5rem 0 .4rem 0;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  word-spacing: .5rem;
+  font-weight: 500;
+  color: #171717;
+  text-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.3);
+}
+
+.contianer .artist {
+  margin: 0 0 4rem 0;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  color: #636e72;
+}
+
+.contianer .cover-div {
+  width: 25rem;
+  height: 25rem;
+  margin: 0 auto 3.6rem auto;
+}
+
+.contianer .cover-div .cover {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-box-shadow: 0 0.5rem 2rem -0.4rem rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0.5rem 2rem -0.4rem rgba(0, 0, 0, 0.5);
+}
+
+.contianer .cover-div .animate-cover {
+  -webkit-animation: rotateCover 4s linear infinite;
+          animation: rotateCover 4s linear infinite;
+}
+
+@-webkit-keyframes rotateCover {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateCover {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.contianer .time-stamp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 23.5rem;
+  margin: auto;
+}
+
+.contianer #durationSlider {
+  width: 24rem;
+  height: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 1.8rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: rgba(255, 255, 255, 0.8);
+  outline: none;
+  -webkit-box-shadow: 0 0.2rem 0.4rem -0.1rem black;
+          box-shadow: 0 0.2rem 0.4rem -0.1rem black;
+  opacity: .7;
+  -webkit-transition: 100ms;
+  transition: 100ms;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.contianer #durationSlider:hover {
+  opacity: 1;
+}
+
+.contianer #durationSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+          appearance: none;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  -webkit-box-shadow: -25.5rem 0 0rem 25rem #6c5ce7;
+          box-shadow: -25.5rem 0 0rem 25rem #6c5ce7;
+  background: #6c5ce7;
+  cursor: pointer;
+}
+
+.contianer .controls-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 25rem;
+  margin: auto;
+}
+
+.contianer .controls-div .fas {
+  font-size: 2rem;
+  -webkit-filter: drop-shadow(0 0.2rem 0.3rem rgba(0, 0, 0, 0.3));
+          filter: drop-shadow(0 0.2rem 0.3rem rgba(0, 0, 0, 0.3));
+  color: #171717;
+  -webkit-transition: 100ms;
+  transition: 100ms;
+  cursor: pointer;
+  padding: .5rem;
+}
+
+.contianer .controls-div .fas:hover {
+  color: #6c5ce7;
+}
+
+.contianer .controls-div .play-icon {
+  margin: 0 5rem 0 5rem;
+  font-size: 4.2rem;
+}
+/*# sourceMappingURL=style.css.map */

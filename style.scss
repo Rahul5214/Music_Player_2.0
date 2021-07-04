@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;500;700;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: 'Jost', monospace;
+    font-size: 62.5%; // now 1rem = 10px
+}
+.main-div{
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(to right, rgba(87, 239, 196,.4),rgba(108, 92, 231,.4));
+    display: grid;
+    place-items: center;
+}
+.contianer{
+    height: 55rem;
+    min-width: 32rem;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 2rem;
+    box-shadow: 0 2rem 2rem rgba(0,0,0,.4);
+
+    .title{
+        margin: 4.5rem 0 .4rem 0;
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        letter-spacing: .2rem;
+        word-spacing: .5rem;
+        font-weight: 500;
+        color: #171717;
+        text-shadow: 0 .2rem .3rem  rgba(0,0,0,.3);
+    }
+
+    .artist{
+        margin:0 0 4rem 0;
+        font-size: 1.5rem;
+        text-transform: capitalize;
+        color:#636e72 ;
+    }
+
+    .cover-div{
+        width: 25rem;
+        height: 25rem;
+        margin: 0 auto 3.6rem auto;
+        .cover{
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;            
+            object-fit:cover; 
+            box-shadow: 0 .5rem 2rem -.4rem rgba(black,.5);
+        }
+        .animate-cover{
+            animation: rotateCover 4s linear infinite;
+        }
+        @keyframes rotateCover {
+            from{transform: rotate(0deg);}
+            to{transform: rotate(360deg);}    
+        }
+    }
+
+    .time-stamp{
+        display: flex;
+        justify-content: space-between;
+        width: 23.5rem;
+        margin: auto;
+    }
+
+    #durationSlider{
+        width: 24rem;
+        height: 1rem;
+        border-radius: 1rem;
+        margin-bottom: 1.8rem;
+        appearance: none;
+        background-color: rgba(255, 255, 255, 0.8);
+        outline: none;
+        box-shadow: 0 .2rem .4rem -.1rem rgba(black,1);
+        opacity: .7;
+        transition: 100ms;
+        overflow: hidden;
+        cursor: pointer;
+        &:hover{
+            opacity: 1;
+        }
+
+        &::-webkit-slider-thumb{
+            appearance: none;
+            width: 1.2rem;
+            height: 1.2rem;
+            border-radius: 50%;
+            box-shadow: -25.5rem 0 0rem 25rem #6c5ce7;
+            background: #6c5ce7;
+            cursor: pointer;
+        }
+    }
+
+    .controls-div{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 25rem;
+        margin: auto;
+
+        .fas{
+            font-size: 2rem;
+            filter: drop-shadow(0 .2rem .3rem  rgba(0,0,0,.3));
+            color: #171717;
+            transition: 100ms;
+            cursor: pointer;
+            padding: .5rem;
+
+            &:hover{
+                color:#6c5ce7;
+            }
+        }
+        
+        .play-icon{
+            margin: 0 5rem 0 5rem;
+            font-size: 4.2rem;
+        }
+    }            
+}
+

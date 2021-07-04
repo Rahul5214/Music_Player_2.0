@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUSIC PLAYER 2.0</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main-div">
+        <div class="contianer">
+            <h2 id="title" class="title">blurred lines</h2>
+            <h3 id="artist" class="artist">Robin Thicke</h3>
+            <div id="coverDiv" class="cover-div">
+                <img id="cover" src="./img/blurred.jpg" alt="" class="cover">
+            </div>
+            <div class="time-stamp">
+                <span id="trackCurrentTime">0:00</span>
+                <span id=trackDuration>6:30</span>
+            </div>
+            <input type="range" min="0" max="100" value="0" id="durationSlider">
+            <div id="controlsDiv" class="controls-div">
+                <i id="prevIcon" class="fas prev-icon fa-step-backward"></i>
+                <i id="playIcon" class="fas play-icon fa-play-circle"></i>
+                <i id="nextIcon" class="fas next-icon fa-step-forward"></i>
+            </div>
+        </div>
+        <div class="music-div">
+            <audio id="audio" src="./music/blurred.mp3"></audio>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
